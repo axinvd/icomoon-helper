@@ -6,10 +6,7 @@ export const renderIcon: React.FC<IRenderIconProps> = (props) => {
   return (
     <View>
       {props.symbols.map((symbol, index) => (
-        <Text
-          key={symbol.value}
-          style={getStyles(symbol, props, index)}
-        >
+        <Text key={symbol.value} style={getStyles(symbol, props, index)}>
           {symbol.value}
         </Text>
       ))}
@@ -22,13 +19,8 @@ const getStyles = (
   {size, color, opacity, fontFamily}: IRenderIconProps,
   index: number,
 ): TextStyle => {
-  const isFirst = index == 0
-  const propsColor = typeof color === 'object'
-    ? color?.[index]
-    : isFirst ? color : undefined
-  const propsOpacity = typeof opacity === 'object'
-    ? opacity?.[index]
-    : isFirst ? opacity : undefined
+  const propsColor = typeof color === 'object' ? color?.[index] : color
+  const propsOpacity = typeof opacity === 'object' ? opacity?.[index] : opacity
 
   return {
     fontSize: size || symbol.size,
@@ -36,6 +28,6 @@ const getStyles = (
     fontFamily,
     color: propsColor || symbol.color,
     opacity: propsOpacity || symbol.opacity,
-    position: isFirst ? 'relative' : 'absolute',
+    position: index === 0 ? 'relative' : 'absolute',
   }
 }

@@ -1,9 +1,8 @@
 src
 .idea
-testFiles
-visualstudio-colored.js
 tsconfig.json
 .eslintignore
 .eslintrc.js
 .gitignore
 .npmignore
+.prettier

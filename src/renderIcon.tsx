@@ -1,7 +1,7 @@
 import {needRenderIcon} from './logger'
 
 export const renderIcon = (): null => {
-  needRenderIcon('current platform')
+  needRenderIcon()
 
   return null
 }

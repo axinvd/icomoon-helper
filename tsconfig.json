@@ -2,24 +2,18 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Node 10",
   "compilerOptions": {
-    "lib": [
-      "es2018"
-    ],
+    "lib": ["es2018"],
     "module": "commonjs",
     "target": "es2018",
-    "types": [
-      "node",
-      "react-native"
-    ],
+    "types": ["node", "react-native"],
     "jsx": "react-native",
     "outDir": "dist",
     "allowJs": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true
   },
-  "include": [
-    "src/*.*"
-  ]
+  "include": ["src/*.*"]
 }

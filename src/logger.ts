@@ -1,17 +1,5 @@
-import chalk from 'chalk'
-
 export const getLogString = (message: string): string => {
   return '[icomoon-helper] ' + message
-}
-
-const log = (message: string): void => {
-  process.stdout.write(getLogString(message) + '\n')
-}
-
-export const loggerNode = {
-  error: (message: string): void => log(chalk.red(message)),
-  warn: (message: string): void => log(chalk.yellow(message)),
-  log,
 }
 
 export const logger = {
@@ -32,6 +20,6 @@ export const checkSymbolsCount = (symbol: string, count: number): void => {
   }
 }
 
-export const needRenderIcon = (platform: string): void => {
-  logger.error('For ' + platform + ' need provide renderIcon function')
+export const needRenderIcon = (): void => {
+  logger.error('For current platform need provide renderIcon function')
 }

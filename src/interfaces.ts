@@ -1,13 +1,3 @@
-export interface IOptions {
-  selection: string
-  icons: string[]
-  outputFont: string[]
-  outputAll?: string
-  outputNames?: string
-  force: boolean
-  visible: boolean
-}
-
 export interface IIconProps {
   size?: number
   color?: string | string[]
