@@ -4,16 +4,20 @@
   "compilerOptions": {
     "lib": ["es2018"],
     "module": "commonjs",
-    "target": "es2018",
+    "target": "es6",
     "types": ["node", "react-native"],
-    "jsx": "react-native",
+    "jsx": "react",
     "outDir": "dist",
     "allowJs": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "declaration": true
+    "declaration": true,
+    "moduleResolution": "node",
+    "noResolve": false,
+    "noImplicitAny": false,
+    "removeComments": true
   },
   "include": ["src/*.*"]
 }
